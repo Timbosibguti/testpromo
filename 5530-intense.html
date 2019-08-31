@@ -8,6 +8,439 @@
 <body>
 
 	<style>
+		body{
+    background: #000;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Geometria';
+    src: local('/Fonts/Geometria Medium'), local('/Fonts/Geometria-Medium'),
+        url('/Fonts/Geometria-Medium.woff2') format('woff2'),
+        url('/Fonts/Geometria-Medium.woff') format('woff'),
+        url('/Fonts/Geometria-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Geometria-Bold';
+    src: local('Fonts/Geometria Bold'), local('Fonts/Geometria-Bold'),
+        url('Fonts/Geometria-Bold.woff2') format('woff2'),
+        url('Fonts/Geometria-Bold.woff') format('woff'),
+        url('Fonts/Geometria-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+img{
+	width: 100%;
+}
+
+h1{
+font-family: 'Geometria-Bold';
+font-size: 260pt;
+margin: 0;
+}
+
+.phone-top{
+    position: relative;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.phone-top img{
+	width: 100%;
+}
+
+.phone-top__text{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    text-align: center;
+}
+
+.phone-top__text h4:nth-child(1){
+	margin-bottom: -7%
+}
+
+.phone-top__text h4{
+	font-family: "Geometria-Medium";
+	font-size: 38pt;
+}
+
+.battery img{
+	width: 100%;
+}
+
+.screen{
+    position: relative;
+}
+
+.screen-text__left {
+    position: absolute;
+    bottom: 12%;
+    left: 7%;
+    color: white;
+}
+
+.screen-text__left h3 {
+    color: white;
+    font-size: 60pt;
+    margin-bottom: 0;
+    font-family: "Geometria-Medium";
+}
+
+.screen-text__left p{
+    font-size: 21pt;
+    font-family: 'Geometria';
+}
+
+.screen-text__right {
+    position: absolute;
+    bottom: -4%;
+    right: 5%;
+    color: white;
+}
+
+.screen-text__right h3 {
+    color: white;
+    font-size: 63pt;
+    margin-bottom: 0;
+    font-family: "Geometria-Medium";
+}
+
+.screen-text__right p{
+    font-size: 21pt;
+    font-family: 'Geometria';
+}
+
+.param-left{
+	position: relative;
+}
+
+.param-left img{
+    width: 65%;
+}
+
+.param-left b{
+	font-family: "Geometria-Bold";
+}
+
+.param-left__text{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 11%;
+}
+
+.param-left__text h3{
+	font-family: "Geometria-Medium";
+	font-size: 60pt;
+}
+
+.param-left__text p{
+    font-size: 21pt;
+    font-family: 'Geometria';
+}
+
+.param{
+	position: relative;
+}
+
+.param-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.param-right__text {
+    position: absolute;
+    color: white;
+    right: 5%;
+    bottom: 8%;
+}
+
+.param-right__text img{
+    width: 140%;
+    position: absolute;
+    left: -140%;
+    bottom: -115%;
+    z-index: 1;
+}
+
+.param-right h3, .navigation-left__top h3{
+	font-family: "Geometria-Medium";
+	font-size: 60pt;
+	margin-bottom: 0;
+}
+
+.param-right p, .navigation-left__top p{
+	font-family: 'Geometria';
+	font-size: 23pt;
+}
+
+.navigation{
+	padding-top: 57%;
+	position: relative;
+}
+
+.navigation-left{
+	position: relative;
+}
+
+.navigation-left img{
+	width: 85%;
+}
+
+.navigation-left__top{
+    position: absolute;
+    top: 12%;
+    color: white;
+    left: 9%;
+    z-index: 2;
+}
+
+.navigation-left__down h3{
+    font-size: 60pt;
+    margin: 0;
+    font-family: "Geometria-Medium";
+}
+
+.navigation-left__down p{
+    font-size: 23pt;
+    font-family: "Geometria";
+}
+
+.navigation-left__down{
+    position: absolute;
+    color: white;
+    bottom: 44%;
+    left: 6%;
+}
+
+.navigation-right{
+    position: absolute;
+    top: 27%;
+    right: 4%;
+    z-index: 1;
+}
+
+.navigation-right__text{
+    color: white;
+    padding-left: 21%;
+}
+
+.navigation-right__text h3, .design h3{
+    font-size: 60pt;
+    margin: 0;
+    font-family: "Geometria-Medium";
+}
+
+.navigation-right__text p, .design p{
+    font-size: 23pt;
+    font-family: "Geometria";
+}
+
+.design{
+	margin-top: -78%;
+	padding-bottom: 5%;
+}
+
+.design-text{
+	color: white;
+	text-align: center;
+	margin-top: 5%;
+}
+
+.spec{
+    background: white;
+    padding: 5% 0;
+}
+
+@media(max-width: 1600px) {
+
+	h1{
+		font-size: 230pt;
+	}
+
+	.phone-top__text {
+    bottom: -1%;
+}
+	.phone-top__text h4 {
+    font-size: 32pt;
+}
+
+.screen-text__left h3, .screen-text__right h3, .param-left__text h3, .param-right h3, .navigation-left__top h3, .navigation-right__text h3, .design h3, .navigation-left__down h3{
+    font-size: 43pt;
+}
+
+.screen-text__left p, .screen-text__right p, .param-left__text p, .param-right p, .navigation-left__top p, .navigation-right__text p, .design p, .navigation-left__down p{
+    font-size: 17pt;
+}
+
+.screen-text__right {
+    right: 10%;
+}
+
+.navigation-right {
+    position: absolute;
+    top: 25%;
+    right: 1%;
+    z-index: 1;
+}
+	
+}
+
+@media(max-width: 1440px) {
+	h1 {
+    font-size: 200pt;
+}
+
+.phone-top__text {
+    bottom: -3%;
+}
+
+.phone-top__text h4 {
+    font-size: 29pt;
+}
+
+.screen-text__left h3, .screen-text__right h3, .param-left__text h3, .param-right h3, .navigation-left__top h3, .navigation-right__text h3, .design h3, .navigation-left__down h3 {
+    font-size: 41pt;
+}
+
+.screen-text__left p, .screen-text__right p, .param-left__text p, .param-right p, .navigation-left__top p, .navigation-right__text p, .design p, .navigation-left__down p {
+    font-size: 15pt;
+}
+}
+
+@media(max-width: 768px) {
+	.phone-top__text {
+    bottom: -3%;
+}
+
+h1 {
+    font-size: 110pt;
+}
+.phone-top__text h4 {
+    font-size: 22pt;
+}
+
+.phone-top__text h4:nth-child(3) {
+    margin-top: 0;
+}
+
+.screen-text__left h3, .screen-text__right h3, .param-left__text h3, .param-right h3, .navigation-left__top h3, .navigation-right__text h3, .design h3, .navigation-left__down h3 {
+    font-size: 19pt;
+}
+
+.screen-text__left p, .screen-text__right p, .param-left__text p, .param-right p, .navigation-left__top p, .navigation-right__text p, .design p, .navigation-left__down p {
+    font-size: 9pt;
+}
+
+.navigation-right__text {
+    color: white;
+    padding-left: 21%;
+}
+
+.navigation-right {
+    position: absolute;
+    top: 25%;
+    left: 51%;
+    z-index: 1;
+}
+}
+@media(max-width: 590px){
+h1 {
+    font-size: 82pt;
+}
+.phone-top__text h4 {
+    font-size: 14pt;
+}
+.screen-text__left h3, .screen-text__right h3, .param-left__text h3, .param-right h3, .navigation-left__top h3, .navigation-right__text h3, .design h3, .navigation-left__down h3 {
+    font-size: 15pt;
+}
+.screen-text__left p, .screen-text__right p, .param-left__text p, .param-right p, .navigation-left__top p, .navigation-right__text p, .design p, .navigation-left__down p {
+    font-size: 6pt;
+}
+
+}
+@media(max-width: 480px) {
+	.phone-top__text h4 {
+    font-size: 11pt;
+}
+h1 {
+    font-size: 67pt;
+}
+
+.phone-top__text {
+    bottom: -2%;
+}
+
+.screen-text__left h3, .screen-text__right h3, .param-left__text h3, .param-right h3, .navigation-left__top h3, .navigation-right__text h3, .design h3, .navigation-left__down h3 {
+    font-size: 13pt;
+}
+
+.screen-text__left p, .screen-text__right p, .param-left__text p, .param-right p, .navigation-left__top p, .navigation-right__text p, .design p, .navigation-left__down p {
+    font-size: 5pt;
+}
+}
+
+@media(max-width: 420px) {
+	h1 {
+    font-size: 54pt;
+}
+
+.phone-top__text h4 {
+    font-size: 10pt;
+}
+
+.screen-text__left p, .screen-text__right p, .param-left__text p, .param-right p, .navigation-left__top p, .navigation-right__text p, .design p, .navigation-left__down p {
+    font-size: 4pt;
+}
+
+.screen-text__left h3, .screen-text__right h3, .param-left__text h3, .param-right h3, .navigation-left__top h3, .navigation-right__text h3, .design h3, .navigation-left__down h3 {
+    font-size: 12pt;
+}
+}
+
+@media(max-width: 375px) {
+	h1 {
+    font-size: 48pt;
+}
+
+.phone-top__text h4 {
+    font-size: 9pt;
+}
+
+.screen-text__left h3, .screen-text__right h3, .param-left__text h3, .param-right h3, .navigation-left__top h3, .navigation-right__text h3, .design h3, .navigation-left__down h3 {
+    font-size: 10pt;
+}
+}
+
+@media(max-width: 320px) {
+	h1 {
+    font-size: 40pt;
+}
+
+.phone-top__text h4 {
+    font-size: 8pt;
+}
+
+.screen-text__left p, .screen-text__right p, .param-left__text p, .param-right p, .navigation-left__top p, .navigation-right__text p, .design p, .navigation-left__down p {
+    font-size: 3pt;
+}
+
+.screen-text__left h3, .screen-text__right h3, .param-left__text h3, .param-right h3, .navigation-left__top h3, .navigation-right__text h3, .design h3, .navigation-left__down h3 {
+    font-size: 9pt;
+}
+
+.navigation-right {
+    top: 26%;
+}
+}
 		@font-face {
     font-family: 'Geometria-Medium';
     src: local('Fonts/Geometria Medium'), local('Fonts/Geometria-Medium'),

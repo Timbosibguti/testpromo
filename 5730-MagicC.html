@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BQ 5730 Magic C</title>
+</head>
+<body>
+	<style>
+
+		@font-face {
+    font-family: 'Geometria-Medium';
+    src: local('Fonts/Geometria-Medium'), local('Fonts/Geometria-Medium'),
+        url('Fonts/Geometria-Medium.woff2') format('woff2'),
+        url('Fonts/Geometria-Medium.woff') format('woff'),
+        url('Fonts/Geometria-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  		@font-face {
+    font-family: 'Geometria-Bold';
+    src: local('Fonts/Geometria-Bold'), local('Fonts/Geometria-Medium'),
+        url('Fonts/Geometria-Bold.woff2') format('woff2'),
+        url('Fonts/Geometria-Bold.woff') format('woff'),
+        url('Fonts/Geometria-Bold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+		body{
+	margin: 0;
+	padding: 0;
+	background: #000;
+}
+
+img{
+	width: 100%;
+}
+
+.head {
+    position: relative;
+    background-image: url("images/promo/5730 MagicC/background.png");
+    min-height: 1120px;
+    background-size: cover;
+}
+
+.head-left {
+    position: absolute;
+    left: 0;
+}
+
+.head-right {
+    position: absolute;
+    right: 19%;
+    top: 30%;
+}
+
+.head-right__bottom{
+    position: absolute;
+    bottom: -27%;
+    left: 20%;
+}
+
+.head-right__bottom p {
+    position: absolute;
+    bottom: -8%;
+    font-family: 'Geometria-Medium';
+    font-size: 1.2em;
+}
+
+.screen{
+    padding-top: 21%;
+    background: #e5e5e5;
+}
+
+.camera{
+    background: #000;
+    margin-top: -35%;
+    overflow: hidden;
+}
+
+.camera img{
+    width: 84%;
+    margin-left: 30%;
+}
+
+.camera-mods{
+    margin-top: -62%;
+    position: relative;
+}
+
+.camera-mods__left{
+    position: absolute;
+    color: white;
+    left: 5%;
+    top: 5%;
+}
+
+.camera-mods__left h3 {
+    font-family: 'Geometria-Bold';
+    font-size: 5em;
+    margin-bottom: 0;
+    color: #939393;
+}
+
+.camera-mods__left p, .camera-mods__right p, .camera-mods__bottom p {
+    font-family: 'Geometria-Medium';
+    font-size: 2em;
+}
+
+
+.camera-mods__right{
+    position: absolute;
+    right: 2%;
+    color: white;
+    bottom: 51%;
+}
+
+.camera-mods__right h3, .camera-mods__bottom h3{
+    font-family: 'Geometria-Bold';
+    font-size: 4em;
+    margin-bottom: 0;
+    color: #939393;
+    line-height: 1;
+}
+
+.camera-mods__bottom{
+    color: white;
+    bottom: 30%;
+    position: absolute;
+    text-align: center;
+    left: 40%;
+}
+
+
+.three-phones {
+    background: #e5e5e5;
+    padding-top: 20%;
+    margin-top: -9%;
+    position: relative;
+    overflow: hidden;
+}
+
+.three-phones__text {
+    position: absolute;
+    top: 16%;
+    display: flex;
+    left: 18%;
+    width: 100%;
+    align-items: baseline;
+    list-style: none;
+    flex-direction: row;
+
+}
+
+.ul-left{
+    margin-right: 0;
+    padding: 0;
+    width: 40%;
+    list-style: none;
+}
+
+.three-phones__text h3 {
+    font-size: 3em;
+    font-family: 'Geometria-Bold';
+    color: #939393;
+    line-height: 1;
+}
+
+.three-phones__text p {
+    font-size: 1.6em;
+    font-family: 'Geometria-Medium';
+}
+
+.ul-right{
+    padding: 0;
+    width: 41%;
+    list-style: none;
+}
+
+.glass{
+    background: #e5e5e5;
+    padding-top: 5%;
+    margin-top: -2%;
+}
+
+.glass img{
+    position: relative;
+    z-index: 1;
+}
+
+.spec{
+    background: #fff;
+    margin-top: -15%;
+    position: relative;
+    z-index: 0;
+    padding-top: 20%;
+}
+
+@media(max-width: 1600px) {
+	.head-left {
+    position: absolute;
+    left: -5%;
+}
+.head-right {
+    position: absolute;
+    right: 14%;
+    top: 26%;
+}
+.camera-mods__left h3, .camera-mods__right h3, .camera-mods__bottom h3 {
+    font-size: 3.5em;
+}
+.camera-mods__left p, .camera-mods__right p, .camera-mods__bottom p {
+    font-size: 1.5em;
+}
+.three-phones__text p {
+    font-size: 1.3em;
+}
+.three-phones__text h3 {
+    font-size: 2.7em;
+}
+
+}
+
+@media(max-width: 1440px) {
+	.head-right {
+    position: absolute;
+    right: 12%;
+    top: 26%;
+}
+.head-left {
+    position: absolute;
+    left: -10%;
+}
+
+.head-right__bottom {
+    position: absolute;
+    bottom: -27%;
+    left: 12%;
+}
+.camera-mods__left h3, .camera-mods__right h3, .camera-mods__bottom h3 {
+    font-size: 3em;
+}
+.camera-mods__left p, .camera-mods__right p, .camera-mods__bottom p {
+    font-size: 1.3em;
+}
+.three-phones__text h3 {
+    font-size: 2.4em;
+}
+.three-phones__text p {
+    font-size: 1.2em;
+}
+}
+
+@media(max-width: 1366px) {
+	.head-left {
+    left: -13%;
+}
+.head-right {
+    right: 10%;
+}
+
+.head-right__bottom {
+    left: 10%;
+}
+.camera-mods__left h3, .camera-mods__right h3, .camera-mods__bottom h3 {
+    font-size: 2.5em;
+}
+.camera-mods__left p, .camera-mods__right p, .camera-mods__bottom p {
+    font-size: 1em;
+}
+.camera-mods__right {
+    right: 6%;
+}
+.three-phones__text h3 {
+    font-size: 2.1em;
+}
+.three-phones__text p {
+    font-size: 1em;
+}
+}
+
+@media(max-width: 768px) {
+	.head-right {
+    right: -18%;
+}
+.head-right img{
+	width: 50%;
+}
+.head-left {
+    left: -10%;
+}
+
+.head-left img{
+    width: 70%;
+}
+.head {
+    min-height: 650px;
+}
+.head-right__bottom p {
+    bottom: -7%;
+    font-size: 0.7em;
+}
+.head-right__bottom {
+    left: 10%;
+    right: 5%;
+}
+.screen {
+    padding-top: 28%;
+}
+.camera-mods__left h3, .camera-mods__right h3, .camera-mods__bottom h3 {
+    font-size: 2em;
+}
+.camera-mods__left p, .camera-mods__right p, .camera-mods__bottom p {
+    font-size: 0.8em;
+}
+.camera-mods__right {
+    right: 2%;
+}
+.three-phones__text h3 {
+    font-size: 1.6em;
+}
+.three-phones__text p {
+    font-size: 0.6em;
+}
+}
+
+@media(max-width: 480px) {
+	.head {
+    min-height: 400px;
+}
+.head-right {
+    right: -62%;
+}
+.head-right img {
+    width: 32%;
+}
+.head-right__bottom p {
+    bottom: -17%;
+    font-size: 0.5em;
+}
+.head-right__bottom {
+	bottom: -28%;
+}
+.camera-mods__left h3, .camera-mods__right h3, .camera-mods__bottom h3 {
+    font-size: 1em;
+}
+.camera-mods__left p, .camera-mods__right p, .camera-mods__bottom p {
+    font-size: 0.5em;
+}
+.three-phones__text h3 {
+    font-size: 1em;
+}
+.three-phones__text p {
+    font-size: 0.41em;
+}
+}
+
+@media(max-width: 480px) {
+	.head {
+    min-height: 350px;
+}
+.head-right {
+    right: -75%;
+}
+.head-right__bottom p {
+    font-size: 0.44em;
+}
+.camera-mods__left p, .camera-mods__right p, .camera-mods__bottom p {
+    font-size: 0.45em;
+}
+.three-phones__text h3 {
+    font-size: 0.9em;
+}
+.three-phones__text {
+    left: 15%;
+}
+.three-phones__text p {
+    font-size: 0.39em;
+}
+}
+
+@media(max-width: 370px) {
+	.head {
+    min-height: 311px;
+}
+.head-right {
+    left: 54%;
+}
+.camera-mods__left h3, .camera-mods__right h3, .camera-mods__bottom h3 {
+    font-size: 0.8em;
+}
+.camera-mods__left p, .camera-mods__right p, .camera-mods__bottom p {
+    font-size: 0.39em;
+}
+.three-phones__text p {
+    font-size: 0.3em;
+}
+.three-phones__text h3 {
+    font-size: 0.8em;
+}
+}
+
+@media(max-width: 360px) {
+	.head-right__bottom {
+    bottom: -27%;
+}
+.head-right__bottom p {
+    font-size: 0.4em;
+}
+.three-phones__text p {
+    font-size: 5.5px;
+}
+}
+
+@media(max-width: 320px) {
+	.head {
+    min-height: 270px;
+}
+.head-right__bottom p {
+    font-size: 5.5px;
+}
+.camera-mods__left p, .camera-mods__right p, .camera-mods__bottom p {
+    font-size: 5.5px;
+}
+.three-phones__text p {
+    font-size: 5px;
+}
+.three-phones__text h3 {
+    font-size: 0.7em;
+}
+}
+	</style>
+	<div class="main">
+		<div class="head">
+			<div class="head-left">
+				<img src="images/promo/5730 MagicC/phone-top.png" alt="">
+			</div>
+			<div class="head-right">
+				<img src="images/promo/5730 MagicC/logo.png" alt="">
+			</div>
+			<div class="head-right__bottom">
+				<img src="images/promo/5730 MagicC/phone-top1 .png" alt="">
+				<p>Вдохновленный магическими <br> оттенками северного сияния, <br> цвет "ультрафиолет" напомнит <br> вам о бархатной темноте <br> и волшебстве ночного неба. <br> Зеркальная поверхность задней <br> панели в дуэте с яркими цветами <br> создает завораживающий <br> оптический эффект.</p>
+			</div>
+		</div>
+		<div class="screen">
+			<img src="images/promo/5730 MagicC/screen.png" alt="">
+		</div>
+		<div class="camera">
+			<img src="images/promo/5730 MagicC/camera.png" alt="">
+		</div>
+		<div class="camera-mods">
+			<img src="images/promo/5730 MagicC/camera-modes.png" alt="">
+			<div class="camera-mods__left">
+				<h3>Портрет</h3>
+				<p>Создавайте высоко- <br> классные портретные <br> снимки. Эффект боке <br> на фотографиях станет <br> вашей визитной <br> карточкой.</p>
+			</div>
+			<div class="camera-mods__right">
+				<h3>Красивое <br> лицо</h3>
+				<p>Специальные эффекты <br> позволяют вам выглядеть <br> свежее и ярче. </p>
+			</div>
+			<div class="camera-mods__bottom">
+				<h3>Панорама</h3>
+				<p>Захвати в одном кадре гораздо <br> больше объектов и пространства.</p>
+			</div>
+		</div>
+		<div class="three-phones">
+			<img src="images/promo/5730 MagicC/3-phone.png" alt="">
+			<div class="three-phones__text">
+				<ul class="ul-left">
+					<li><h3>Яркий мир <br> на вашей <br> ладони</h3>
+						<p>Благодаря закругленным <br> углам и тонкому корпусу <br> смартфон удобно <br> ложится в руку</p>
+					</li>
+					<li>
+						<h3>Android™ <br> 9 Pie</h3>
+						<p>Алгоритмы оптимизации работы <br> фоновых приложений, осуществля-<br>емые с помощью современной <br> ОС Android 9, гарантируют высокую <br> производительность смартфона даже <br> после длительного использования.</p>
+					</li>
+					<li>
+						<h3>8-ядерный <br> процессор </h3>
+						<p>Передовая многоядерная <br> архитектура центрального <br> процессора UNISOC SC9863 и <br> 2 ГБ RAM обеспечивает высокую <br> скорость обработки данных, <br>
+						а 16 ГБ ROM, расширяемая до <br> 128 ГБ, делают смартфон <br> удобным хранилищем для <br> большого количества файлов</p>
+					</li>
+				</ul>
+				<ul class="ul-right">
+					<li>
+						<h3>Двойная <br> защита — <br>Fingerprint <br> и Face Unlock</h3>
+						<p>Ваши данные под надежной <br> защитой сканера отпечатков <br> пальцев и системы <br> распознавания лица.</p>
+					</li>
+					<li>
+						<h3>Оплата <br> в одно касание</h3>
+						<p>Cистема NFC позволяет <br> осуществлять оплату покупок <br> касанием смартфона быстро <br> и легко!</p>
+					</li>
+					<li>
+						<h3>Целый день <br> без подзарядки</h3>
+						<p>Благодаря высокоемкой батарее <br> 2700 мАч смартфон станет незам-<br>енимым спутником вашей <br> активной жизни. Смотрите видео, <br> играйте в игры и просматривайте <br> веб-страницы целый день без <br> подзарядки!</p>
+					</li>
+				</ul>
+			</div>
+				<div class="glass">
+					<img src="images/promo/5730 MagicC/glass.png" alt="">
+				</div>
+		</div>
+		<div class="spec">
+			<img src="images/promo/5730 MagicC/spec.png" alt="">
+		</div>
+	</div>
+</body>
+</html>

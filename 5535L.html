@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5535L</title>
+</head>
+<body>
+	<style>
+		body{
+			margin: 0;
+		}
+						@font-face {
+    font-family: 'Geometria-Medium';
+    src: local('Fonts/Geometria-Medium'), local('Fonts/Geometria-Medium'),
+        url('Fonts/Geometria-Medium.woff2') format('woff2'),
+        url('Fonts/Geometria-Medium.woff') format('woff'),
+        url('Fonts/Geometria-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  		@font-face {
+    font-family: 'Geometria-Bold';
+    src: local('Fonts/Geometria-Bold'), local('Fonts/Geometria-Medium'),
+        url('Fonts/Geometria-Bold.woff2') format('woff2'),
+        url('Fonts/Geometria-Bold.woff') format('woff'),
+        url('Fonts/Geometria-Bold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+		img{
+			width: 100%;
+		}
+		.head{
+			position: relative;
+		}
+.main{
+	overflow: hidden;
+}
+.head-text__top {
+    position: absolute;
+    top: 8%;
+    right: 8%;
+    color: white;
+    text-align: right;
+}
+.head-text__top h3 {
+    font-family: 'Geometria-Bold';
+    font-size: 90pt;
+    margin-top: 0;
+}
+.head-text__top p {
+    font-family: 'Geometria-Medium';
+    font-size: 25pt;
+}
+.head-text__bot {
+    position: absolute;
+    right: 8%;
+    top: 31%;
+    color: white;
+}
+.head-text__bot h3{
+    font-size: 90pt;
+    font-family: 'Geometria-Bold';
+    text-align: right;
+}
+.top-screen {
+    position: absolute;
+    left: 5%;
+    top: 63%;
+    color: white;
+}
+.top-screen h3{
+    font-size: 42pt;
+    font-family: 'Geometria-Bold';
+    margin-bottom: 0;
+}
+.top-screen p{
+    font-family: 'Geometria-Medium';
+    font-size: 16pt;
+}
+.battery{
+    position: relative;
+    background: #000;
+    margin-top: -2%;
+}
+.battery img{
+    margin-top: -14%;
+    width: 82%;
+    margin-left: 24%;
+}
+.battery-text{
+    position: absolute;
+    top: 21%;
+    color: white;
+    left: 7%;
+}
+.battery-text h3{
+    font-size: 42pt;
+    font-family: 'Geometria-Bold';
+}
+.battery-text p{
+    font-family: 'Geometria-Medium';
+    font-size: 16pt;
+}
+.camera{
+    position: relative;
+}
+.camera-text__left{
+    position: absolute;
+    left: 13%;
+    color: white;
+    top: 12%;
+}
+.camera-text__left h3{
+    font-size: 42pt;
+    font-family: 'Geometria-Bold';
+}
+.camera-text__right{
+    position: absolute;
+    right: 11%;
+    top: 14%;
+    color: white;
+}
+.camera-text__right p{
+    font-family: 'Geometria-Medium';
+    font-size: 16pt;
+}
+.nfc{
+	position: relative;
+	margin-top: -2%;
+}
+.nfc-text{
+    position: absolute;
+    bottom: 24%;
+    color: white;
+    left: 12%;
+}
+.nfc-text h3{
+    font-size: 42pt;
+    font-family: 'Geometria-Bold';
+}
+.nfc-text p{
+    font-family: 'Geometria-Medium';
+    font-size: 16pt;
+}
+.param {
+    position: relative;
+    margin-top: -3%;
+    padding-bottom: 5%;
+    background: #000;
+}
+.param-items{
+    width: 30%;
+    margin: 0 1%;
+}
+.param-items img{
+	width: 70%;
+}
+.param-items__text{
+	color: white;
+	margin-left: 5%;
+}
+.param-main {
+    top: 7%;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+    background: #000;
+    margin-left: 3%;
+}
+.param-items__text h3 {
+    font-family: 'Geometria-Bold';
+    font-size: 24pt;
+    margin-bottom: 0;
+}
+.param-items__text p {
+    font-family: 'Geometria-Medium';
+    font-size: 15pt;
+}
+.param-items:nth-child(4) img{
+	width: 56%;
+}
+.spec{
+    padding-top: 12%;
+    padding-bottom: 2%;
+}
+@media(max-width: 1600px){
+	.head-text__top p {
+    font-size: 20pt;
+}
+.head-text__top h3, .head-text__bot h3 {
+    font-size: 75pt;
+}
+.top-screen h3, .battery-text h3, .camera-text__left h3, .nfc-text h3 {
+    font-size: 36pt;
+}
+.top-screen p, .battery-text p, .camera-text__right p, .nfc-text p {
+    font-size: 14pt;
+}
+.param-items__text h3 {
+    font-size: 21pt;
+}
+.param-items__text p {
+    font-size: 13pt;
+}
+}
+@media(max-width: 1444px){
+.head-text__top h3, .head-text__bot h3 {
+    font-size: 68pt;
+}
+.top-screen h3, .battery-text h3, .camera-text__left h3, .nfc-text h3 {
+    font-size: 34pt;
+}
+.top-screen p, .battery-text p, .camera-text__right p, .nfc-text p {
+    font-size: 13pt;
+}
+.param-items__text h3 {
+    font-size: 18pt;
+}
+.param-items__text p {
+    font-size: 11pt;
+}
+}
+@media(max-width: 1366px){
+.head-text__top p {
+    font-size: 17pt;
+}
+.head-text__top h3, .head-text__bot h3 {
+    font-size: 65pt;
+}
+.top-screen h3, .battery-text h3, .camera-text__left h3, .nfc-text h3 {
+    font-size: 32pt;
+}
+.top-screen p, .battery-text p, .camera-text__right p, .nfc-text p {
+    font-size: 12pt;
+}
+.param-items__text p {
+    font-size: 10pt;
+}	
+}
+@media(max-width: 769px){
+.head-text__top p {
+    font-size: 14pt;
+}
+.head-text__top h3, .head-text__bot h3 {
+    font-size: 33pt;
+}
+.top-screen h3, .battery-text h3, .camera-text__left h3, .nfc-text h3 {
+    font-size: 17pt;
+}
+.top-screen p, .battery-text p, .camera-text__right p, .nfc-text p {
+    font-size: 6.5pt;
+}
+.camera, .nfc {
+    margin-top: -2%;
+}
+.param-items__text h3 {
+    font-size: 10pt;
+}
+.param-items__text p {
+    font-size: 6pt;
+}
+}
+@media(max-width: 480px){
+.head-text__top p {
+    font-size: 8pt;
+}
+.head-text__top h3, .head-text__bot h3 {
+    font-size: 20pt;
+}
+.top-screen h3, .battery-text h3, .camera-text__left h3, .nfc-text h3 {
+    font-size: 12pt;
+}
+.top-screen p{
+    font-size: 4pt;
+}
+.camera-text__right p, .battery-text p, .nfc-text p{
+    font-size: 5pt;
+}
+.param-items__text h3 {
+    font-size: 6pt;
+}
+.param-items__text p {
+    font-size: 4pt;
+}
+}
+@media(max-width: 420px){
+.head-text__top p {
+    font-size: 7pt;
+}
+.head-text__top h3, .head-text__bot h3 {
+    font-size: 18pt;
+}
+.top-screen h3, .battery-text h3, .camera-text__left h3, .nfc-text h3 {
+    font-size: 10pt;
+}
+.top-screen p {
+    font-size: 3.5pt;
+}
+.camera-text__right p, .battery-text p, .nfc-text p {
+    font-size: 4pt;
+}
+.param-items__text h3 {
+    font-size: 5pt;
+}
+.param-items__text p {
+    font-size: 3.6pt;
+}
+}
+@media(max-width: 375px){
+.head-text__top h3, .head-text__bot h3 {
+    font-size: 16pt;
+}
+.head-text__top p {
+    font-size: 6pt;
+}
+.top-screen h3, .battery-text h3, .camera-text__left h3, .nfc-text h3 {
+    font-size: 8pt;
+}
+.top-screen p {
+    font-size: 3pt;
+}
+.param-items__text p {
+    font-size: 3pt;
+}
+}
+@media(max-width: 320px){
+.head-text__top p {
+    font-size: 5pt;
+}
+.head-text__top h3, .head-text__bot h3 {
+    font-size: 13pt;
+}
+.top-screen {
+    left: 2%;
+}
+.battery-text {
+    left: 3%;
+}
+.camera-text__right {
+    right: 6%;
+}
+}
+	</style>
+	<div class="main">
+		<div class="head">
+			<img src="images/promo/5535L/top.jpg" alt="">
+			<div class="head-text__top">
+				<p>BQ 5535L</p>
+				<h3>Strike<br>Power<br>Plus</h3>
+			</div>
+			<div class="head-text__bot">
+				<h3>Заряда<br>не будет<br>мало</h3>
+			</div>
+			<div class="top-screen">
+				<h3>Яркий<br>безрамочный<br>IPS-экран</h3>
+				<p>Безрамочный IPS-экран 5.45” c разрешением HD+ <br> обеспечивает реалистичную цветопередачу<br>и создает эффект полного погружения. Смартфон<br> просто идеален для просмотра фильмов, а также <br> игр. Высокая яркость экрана, насыщенность<br> красок, широкие углы обзора и удивитель-<br>ные визуальные эффекты вам<br>обеспечены.</p>
+			</div>
+		</div>
+		<div class="battery">
+			<img src="images/promo/5535L/battery.png" alt="">
+			<div class="battery-text">
+				<h3>Мощная<br>батарея</h3>
+				<p>Невероятно емкий аккумулятор 5000 мАч<br>позволит вам забыть<br>
+				о заряде на целых 3 дня, даже<br>если вы много играете или активно<br> пользуетесь социальными сетями.</p>
+			</div>
+		</div>
+		<div class="camera">
+			<img src="images/promo/5535L/camera.jpg" alt="">
+			<div class="camera-text__left">
+				<h3>Фото и видео<br>современных<br>стандартов<br>качества</h3>
+			</div>
+			<div class="camera-text__right">
+				<p>Основная камера 13 МП <br>
+				с автофокусом позволяет<br> делать превосходные<br> фотографии с точной передачей цвета и<br>мельчайших нюансов.<br><br>Фронтальная камера 5МП <br>предназначена для отличных<br>селфи и общения с близкими<br>по видеосвязи.</p>
+			</div>
+		</div>
+		<div class="nfc">
+			<img src="images/promo/5535L/terminal.jpg" alt="">
+			<div class="nfc-text">
+				<h3>Бесконтактные<br>платежи с NFC</h3>
+				<p>Модуль NFC позволяет быстро оплачивать<br>покупки с помощью смартфона.</p>
+			</div>
+		</div>
+		<div class="param">
+			<div class="param-main">
+				<div class="param-items">
+					<img src="images/promo/5535L/microSD.png" alt="">
+						<div class="param-items__text">
+							<h3>Без ограни- <br>чений в работе<br>и развлечениях</h3>
+							<p>Оперативная память<br>2 ГБ позволяет комфортно<br>переключаться между<br>запущенными приложениями<br>и плавно открывать «тяжелые»<br>программы.<br><br>Для хранения информации<br>пользователю доступно<br>16 ГБ внутренней памяти<br>устройства, а также реализована<br>возможность установки карты<br>MicroSD объемом до 64 ГБ.</p>
+						</div>
+				</div>
+				<div class="param-items">
+					<img src="images/promo/5535L/process.png" alt="">
+						<div class="param-items__text">
+							<h3>Современный<br>8-ядерный процессор</h3>
+							<p>8-ядерный процессор<br>UNISOC SC9863А обеспечивает<br>высочайшую производительность,<br>молниеносное выполнение<br>операций, а также оптимизирует<br>работу<br>батареи смартфона.</p>
+						</div>
+				</div>
+				<div class="param-items">
+					<img src="images/promo/5535L/circle.png" alt="">
+						<div class="param-items__text">
+							<h3>Искусственный<br>интеллект и новые<br>возможности<br>Android 9.0</h3>
+							<p>Смартфон работает на <br> OC Android 9.0, которая построена<br>на технологиях искусственного<br>интеллекта,<br>что делает взаимодействие<br>с устройством комфортным<br>и практичным. В ОС реализо-<br>вано много новых функций<br>и улучшений, что в совокуп-<br>ности обеспечивает лучшую<br>производительность и<br>автономность аппарата.</p>
+						</div>
+				</div>
+							<div class="param-items">
+					<img src="images/promo/5535L/finger.png" alt="">
+						<div class="param-items__text">
+							<h3>Безопасность<br>превыше<br>всего </h3>
+							<p>Сканер отпечатков пальцев<br>на страже ваших персональных <br> данных – вероятность взлома <br> аппарата стремится к нулю. Ваши <br> фото, переписки и другая <br> информация будут доступны только <br> после подтверждения того, что <br> именно вы являетесь владельцем <br> гаджета. </p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="spec">
+			<img src="images/promo/5535L/spec.jpg" alt="">
+		</div>
+	</div>
+</body>
+</html>

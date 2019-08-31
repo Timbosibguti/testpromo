@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6035L</title>
+</head>
+<body>
+	<style>
+				@font-face {
+    font-family: 'Geometria-Medium';
+    src: local('Fonts/Geometria-Medium'), local('Fonts/Geometria-Medium'),
+        url('Fonts/Geometria-Medium.woff2') format('woff2'),
+        url('Fonts/Geometria-Medium.woff') format('woff'),
+        url('Fonts/Geometria-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  		@font-face {
+    font-family: 'Geometria-Bold';
+    src: local('Fonts/Geometria-Bold'), local('Fonts/Geometria-Medium'),
+        url('Fonts/Geometria-Bold.woff2') format('woff2'),
+        url('Fonts/Geometria-Bold.woff') format('woff'),
+        url('Fonts/Geometria-Bold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.main{
+			background: #000;
+		}
+		img{
+			width: 100%;
+		}
+		.head{
+		    position: relative;
+		}
+		.head-text__left{
+    position: absolute;
+    top: 29%;
+    color: white;
+    left: 27%;
+}
+.head-text__left h3{
+    font-size: 94pt;
+    font-family: 'Geometria-Bold';
+    text-align: right;
+}
+.head-text__right{
+    position: absolute;
+    right: 16%;
+    top: 13%;
+    color: white;
+}
+.head-text__right h3{
+    font-size: 84pt;
+    font-family: 'Geometria-Bold';
+}
+.quality{
+    position: relative;
+    margin-top: -15%;
+}
+.quality-text {
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 31%;
+    top: 7%;
+}
+.quality-text h3{
+    font-family: 'Geometria-Bold';
+    font-size: 40pt;
+}
+.quality-text__down {
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 17%;
+    left: 28%;
+}
+.quality-text__down p{
+    font-size: 15pt;
+    font-family: 'Geometria-Medium';
+}
+.battery {
+    position: relative;
+    padding-left: 45%;
+    overflow: hidden;
+    margin-top: -14%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+.battery img{
+    transform: rotate(-33deg);
+}
+.battery-text {
+    position: absolute;
+    color: white;
+    top: 18%;
+    left: 5%;
+}
+.battery-text h4{
+    font-family: 'Geometria-Bold';
+    font-size: 55pt;
+}
+.battery-text h3{
+    font-family: 'Geometria-Bold';
+    font-size: 46pt;
+}
+.battery-text p{
+    font-family: 'Geometria-Medium';
+    font-size: 17pt;
+}
+.color{
+    margin-top: 6%;
+}
+.color-first{
+    position: absolute;
+    z-index: 3;
+}
+.color-second{
+    position: absolute;
+    width: 65%;
+    z-index: 2;
+}
+.nfc{
+    position: relative;
+}
+.nfc-text{
+    text-align: center;
+    position: absolute;
+    color: white;
+    bottom: 0%;
+    left: 39%;
+}
+.nfc-text h3, .camera-text h3{
+    font-family: 'Geometria-Bold';
+    font-size: 39pt;
+    margin-bottom: 0;
+}
+.nfc-text p, .camera-text p{
+    font-family: 'Geometria-Medium';
+    font-size: 17pt;
+}
+.camera{
+    padding-top: 14%;
+    position: relative;
+}
+.camera-text{
+    position: absolute;
+    top: 5%;
+    color: white;
+    left: 7%;
+}
+.camera-text h3, .param-items__text h3{
+	font-family: 'Geometria-Bold';
+    font-size: 39pt;
+    margin-bottom: 0;
+}
+.camera-text p, .param-items__text p{
+	font-family: 'Geometria-Medium';
+    font-size: 17pt;
+}
+.param{
+	position: relative;
+	margin-top: -1%;
+}
+.param-items{
+    width: 30%;
+    margin: 0 1%;
+}
+.param-items img{
+	width: 70%;
+}
+.param-items__text {
+    color: white;
+    margin-left: 8%;
+}
+.param-main {
+    position: absolute;
+    top: 7%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+.spec{
+    background: #fff;
+    margin-top: -1%;
+    padding-top: 33%;
+    position: relative;
+}
+.finger{
+    position: absolute;
+    top: -7%;
+    left: 37%;
+    text-align: center;
+}
+.finger img{
+    width: 55%;
+}
+.finger h3{
+    font-family: 'Geometria-Bold';
+    font-size: 41pt;
+    margin-top: 0;
+}
+.finger p{
+    font-family: 'Geometria-Medium';
+    font-size: 16pt;
+}
+@media(max-width: 1600px){
+	.head-text__right h3 {
+    font-size: 70pt;
+}
+.head-text__left h3 {
+    font-size: 75pt;
+}
+.quality-text h3 {
+    font-size: 33pt;
+}
+.quality-text__down p {
+    font-size: 13pt;
+}
+.battery-text h4 {
+    font-size: 50pt;
+}
+.battery-text h3 {
+    font-size: 40pt;
+}
+.battery-text p {
+    font-size: 15pt;
+}
+.nfc-text h3, .camera-text h3 {
+    font-size: 34pt;
+}
+.nfc-text p{
+    font-size: 14pt;
+}
+.camera-text p{
+    font-size: 13pt;
+}
+.param-items__text h3 {
+    font-size: 29pt;
+}
+.param-items__text p {
+    font-size: 14pt;
+}
+.finger {
+    top: -8%;
+}
+}
+@media(max-width: 1444px){
+	.head-text__right h3 {
+    font-size: 61pt;
+}
+.head-text__left h3 {
+    font-size: 66pt;
+}
+.quality-text h3 {
+    font-size: 30pt;
+}
+.quality-text__down p {
+    font-size: 12pt;
+}
+.battery-text h4 {
+    font-size: 48pt;
+}
+.battery-text h3 {
+    font-size: 37pt;
+}
+.battery {
+    padding-bottom: 9%;
+}
+.battery-text p {
+    font-size: 14pt;
+}
+.camera-text p {
+    font-size: 12pt;
+}
+.param-items__text h3 {
+    font-size: 26pt;
+}
+.param-items__text p {
+    font-size: 13pt;
+}
+.finger p {
+    font-size: 14pt;
+}
+.finger h3 {
+    font-size: 35pt;
+}
+}
+@media(max-width: 1366px){
+.head-text__right h3 {
+    font-size: 59pt;
+}
+.head-text__left {
+    top: 31%;
+    left: 28%;
+}
+.head-text__left h3 {
+    font-size: 61pt;
+}
+.quality-text h3 {
+    font-size: 28pt;
+}
+.quality-text__down p {
+    font-size: 11pt;
+}
+.battery-text h4 {
+    font-size: 44pt;
+}
+.battery-text h3 {
+    font-size: 34pt;
+}
+.battery-text p {
+    font-size: 13pt;
+}
+.nfc-text h3, .camera-text h3 {
+    font-size: 32pt;
+}
+.nfc-text p {
+    font-size: 13pt;
+}
+.camera-text p {
+    font-size: 11pt;
+}
+.param-items__text p {
+    font-size: 12pt;
+}
+.param-items__text h3 {
+    font-size: 25pt;
+}
+.finger p {
+    font-size: 13pt;
+}
+.finger h3 {
+    font-size: 33pt;
+}
+}
+@media(max-width: 768px){
+	.head-text__right h3 {
+    font-size: 33pt;
+}
+.head-text__left h3 {
+    font-size: 33pt;
+}
+.quality-text h3 {
+    font-size: 16pt;
+}
+.quality-text__down p {
+    font-size: 6pt;
+}
+.battery-text h4 {
+    font-size: 25pt;
+}
+.battery-text h3 {
+    font-size: 20pt;
+}
+.battery-text p {
+    font-size: 8pt;
+}
+.nfc-text h3, .camera-text h3 {
+    font-size: 19pt;
+}
+.nfc-text p {
+    font-size: 8pt;
+}
+.camera-text p {
+    font-size: 6pt;
+}
+.param-items__text p {
+    font-size: 7pt;
+}
+.param-items__text h3 {
+    font-size: 16pt;
+}
+.finger h3 {
+    font-size: 17pt;
+}
+.finger p {
+    font-size: 7pt;
+}
+.finger {
+    top: -8%;
+    left: 23%;
+}
+.finger h3 {
+    font-size: 17pt;
+}
+.finger p {
+    font-size: 7pt;
+}
+}
+@media(max-width: 480px){
+	.head-text__right h3 {
+    font-size: 20pt;
+}
+.head-text__left h3 {
+    font-size: 20pt;
+}
+.quality-text h3 {
+    font-size: 10pt;
+}
+.quality-text__down p {
+    font-size: 4pt;
+}
+.battery-text h4 {
+    font-size: 15pt;
+}
+.battery-text h3 {
+    font-size: 13pt;
+}
+.battery-text p {
+    font-size: 5pt;
+}
+.nfc-text p {
+    font-size: 5pt;
+}
+.nfc-text h3, .camera-text h3 {
+    font-size: 12pt;
+}
+.camera-text p {
+    font-size: 4pt;
+}
+.param-items__text h3 {
+    font-size: 9pt;
+}
+.param-items__text p {
+    font-size: 4pt;
+}
+.finger {
+    left: 7%;
+}
+.finger h3 {
+    font-size: 10pt;
+}
+.finger p {
+    font-size: 5pt;
+}
+}
+@media(max-width: 420px){
+	.head-text__right h3 {
+    font-size: 17pt;
+}
+.head-text__left h3 {
+    font-size: 17pt;
+}
+.quality-text h3 {
+    font-size: 9pt;
+}
+.quality-text__down p {
+    font-size: 3.3pt;
+}
+.battery-text h4 {
+    font-size: 14pt;
+}
+.battery-text h3 {
+    font-size: 11pt;
+}
+.battery-text p {
+    font-size: 4pt;
+}
+.nfc-text p {
+    font-size: 4pt;
+}
+.nfc-text h3, .camera-text h3 {
+    font-size: 10pt;
+}
+.camera-text p {
+    font-size: 3pt;
+}
+.param-items__text h3 {
+    font-size: 8pt;
+}
+.param-items__text p {
+    font-size: 3pt;
+}
+.finger img {
+    width: 16%;
+}
+.finger p {
+    font-size: 4pt;
+}
+.param {
+    margin-top: -2%;
+}
+}
+@media(max-width: 375px){
+	.head-text__right h3 {
+    font-size: 15pt;
+}
+.head-text__left h3 {
+    font-size: 15pt;
+}
+.quality-text h3 {
+    font-size: 8pt;
+}
+.quality-text__down p {
+    font-size: 3pt;
+}
+.battery-text h4 {
+    font-size: 12pt;
+}
+.battery-text h3 {
+    font-size: 9pt;
+}
+.battery-text p {
+    font-size: 3.5pt;
+}
+.nfc-text h3, .camera-text h3 {
+    font-size: 9pt;
+}
+.nfc-text p {
+    font-size: 3pt;
+}
+.camera-text p {
+    font-size: 3pt;
+}
+}
+@media(max-width: 320px){
+	.head-text__right h3, .head-text__left h3{
+    font-size: 13pt;
+}
+
+.quality-text h3 {
+    font-size: 6pt;
+}
+.quality-text__down p {
+    font-size: 2.5pt;
+}
+
+.battery {
+    padding-bottom: 13%;
+}
+.param-items__text h3 {
+    font-size: 7pt;
+}
+.param-items__text p {
+    font-size: 2pt;
+}
+}
+	</style>
+	<div class="main">
+		<div class="head">
+			<img src="images/promo/6035L/strike.png" alt="">
+			<div class="head-text__left">
+				<h3>Strike<br>Power<br>Max</h3>
+			</div>
+			<div class="head-text__right">
+				<h3>
+					Заряда <br> не будет <br> мало
+				</h3>
+			</div>
+		</div>
+		<div class="quality">
+			<div class="quality-text">
+				<h3>Флагманское качество <br> изображения на безрамочном <br> IPS-экране</h3>
+			</div>
+			<img src="images/promo/6035L/screen.png" alt="">
+			<div class="quality-text__down">
+				<p>Безрамочный IPS-дисплей нового смартфона диагональю 6 дюймов с разрешением FHD+ <br> (2160x1080) – это флагманское качество изображения и принципиально новый взгляд на <br> развлечения для максимального погружения во вселенную кино, игр<br>	и любимых сериалов. Картинка на экране выглядит невероятно красочно <br> и реалистично.</p>
+			</div>
+		</div>
+		<div class="battery">
+			<img src="images/promo/6035L/battery.png" alt="">
+			<div class="battery-text">
+				<h4>6000 мАч</h4>
+				<h3>Бескомпромиссная<br>автономность</h3>
+				<p>Аккумулятор емкостью 6000 мАч – аккумулятор, на <br> который можно положиться! Играйте, общайтесь с <br> родными и коллегами, смотрите фильмы, слушайте <br> музыку или просто исследуйте просторы Интернета, <br> забыв о зарядке более чем на 3 дня – этот смартфон <br> удивит вас своей автономностью.</p>
+			</div>
+		</div>
+		<div class="color">
+			<img class="color-first" src="images/promo/6035L/rect.png" alt="">
+			<img class="color-second" src="images/promo/6035L/color.png" alt="">
+			<img class="color-third" src="images/promo/6035L/light.png" alt="">
+		</div>
+		<div class="nfc">
+			<img src="images/promo/6035L/nfc.png" alt="">
+			<div class="nfc-text">
+				<h3>Поддержка NFC</h3>
+				<p>Благодаря технологии NFC вы можете <br> оставить кошелек дома и оплачивать <br> покупки смартфоном.</p>
+			</div>
+		</div>
+		<div class="camera">
+			<div class="camera-text">
+				<h3>Всегда естественные <br> и яркие фотографии</h3>
+				<p>Претворяйте самые смелые замыслы в реальность с основной двойной камерой <br>13 МП + 2 МП. Наличие автофокуса позволяет камере лучше «увидеть» объект <br>  даже в условиях плохого освещения. Фронтальная камера 8 МП обеспечит вам <br>идеальные селфи одним нажатием.</p>
+			</div>
+			<img src="images/promo/6035L/photo.png" alt="">
+		</div>
+	<div class="param">
+		<img src="images/promo/6035L/param-bg.png" alt="">
+		<div class="param-main">
+			<div class="param-items">
+				<img src="images/promo/6035L/microSD.png" alt="">
+					<div class="param-items__text">
+						<h3>Одновременная <br> работа большого <br> количества <br> приложений</h3>
+						<p>омбинация 2 ГБ оперативной памяти <br> и 32 ГБ внутренней, а также возможность <br> расширения на дополнительные 64 ГБ <br> с помощью карты MicroSD помогут быстро и <br> качественно работать с файлами любого размера <br> в режиме многозадачности.</p>
+					</div>
+			</div>
+			<div class="param-items">
+				<img src="images/promo/6035L/process.png" alt="">
+					<div class="param-items__text">
+						<h3>Cкорость <br> и энергоэффек- <br>тивность</h3>
+						<p>Мощный восьмиядерный процессор UNISOC <br> SC9863А работает в диапазоне тактовых частот <br> от 1,2 ГГц до 1,6 ГГц, <br> за счет чего достигается оптимальный баланс <br> между высокой производитель- <br> ностью и оптимальной энергоэффектив- <br> ностью смартфона.</p>
+					</div>
+			</div>
+			<div class="param-items">
+				<img src="images/promo/6035L/circle.png" alt="">
+					<div class="param-items__text">
+						<h3>Новые <br> возможности <br> Android 9.0</h3>
+						<p>Смартфон работает на OC Android 9.0, которая <br> построена на технологиях искусственного <br> интеллекта, а также содержит много новых <br> функций и улучшений, что в совокупности <br> обеспечивает лучшую производитель- <br>ность и автономность аппарата</p>
+					</div>
+			</div>
+		</div>
+			<div class="spec">
+				<div class="finger">
+					<img src="images/promo/6035L/finger.png" alt="">
+					<div class="finger-text">
+						<h3>
+							Fingerprint
+						</h3>
+						<p>Безопасность ваших данных обеспечивает <br> встроенный сканер отпечатков пальцев.</p>
+					</div>
+				</div>
+				<img src="images/promo/6035L/spec.png" alt="">
+			</div>
+		</div>
+	</div>
+		
+</body>
+</html>
